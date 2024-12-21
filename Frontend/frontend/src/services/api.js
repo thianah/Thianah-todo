@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:9000/api/toDo';
+const API_URL = 'https://my-exam-2ppi.onrender.com/api/toDo';
 //  get todos
 export const getTodos = async (page = 1, limit = 10, search = '', filter = '') => {
   const response = await axios.get(`${API_URL}/todos?page=${page}&limit=${limit}&search=${search}&filter=${filter}`);
