@@ -1,0 +1,152 @@
+$primary-color: #34d399;
+$secondary-color: #34d399;
+$background-color: #f4f5f7;
+$text-color: #333;
+$input-bg: hsl(0, 0%, 100%);
+$button-bg: #34d399;
+$button-hover-bg: darken(#34d399, 10%);
+$link-color: #34d399;
+$link-hover-color: darken(#34d399, 10%);
+
+.todo-list {
+  max-width: 1500px;
+  height: 700px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: $background-color;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    text-align: center;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  input,
+  select,
+  textarea {
+    width: calc(50% - 1rem);
+    margin: 0.5rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: $input-bg;
+    color: $text-color;
+    font-size: 1rem;
+    outline: none;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 4px rgba(76, 175, 80, 0.5);
+    }
+  }
+
+  textarea {
+    width: calc(100% - 2rem);
+    height: 100px;
+    resize: vertical;
+  }
+
+  button {
+    margin: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    position: relative;
+    left:80px;
+    background: $button-bg;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: $button-hover-bg;
+    }
+
+    &:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+  }
+  .edit{
+    left:1000px;
+  }
+  .delete{
+    left:1100px;
+    background-color:red;
+    top:-50px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+
+    li {
+      margin: 0.5rem 0;
+      padding: 0.75rem;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        text-decoration: none;
+        color: $link-color;
+        font-weight: 500;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+
+      .action-buttons {
+        margin-top: 0.5rem;
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      &.editing {
+        background: lighten($primary-color, 40%);
+      }
+    }
+  }
+
+  .edit-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    input,
+    textarea,
+    select {
+      width: calc(100% - 2rem);
+    }
+
+    button {
+      align-self: flex-start;
+    }
+  }
+
+  .pagination-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    button {
+      margin: 0 0.5rem;
+    }
+  }
+
+  p {
+    text-align: center;
+    color: $text-color;
+    margin-top: 1rem;
+  }
+}
+
+
